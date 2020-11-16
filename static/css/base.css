@@ -1,0 +1,119 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'lato';
+    height: 100vh;
+}
+
+
+.bkgrd1 {
+    background: url('/media/curious_cow.jpg') no-repeat top center fixed;
+    background-size: cover;    
+    height: 100vh;
+    border-radius: 5px;
+    
+}
+
+.bkgrd2 {
+    background: url('/media/sheeps-curious.jpg') no-repeat top center fixed;
+    background-size: cover;
+    height: 100vh;
+    border-radius: 5px;
+    
+}
+
+
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.logo-font {
+    text-transform: uppercase;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.results-button {
+    background: rgba(22, 22, 22, 0.4);
+    color: white;
+    min-width: 260px;
+    border: white solid 2px;
+}
+
+.results-button:hover,
+.results-button:active,
+.results-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: rgb(0, 0, 0, 0.4);
+    color: white;
+}
+
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
+.pad-t{
+    padding-top: 35%;
+}
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+
+    
+
+    
+}
+
+@media (max-width: 1100px) {
+.mob-font{
+        font-size: 150%;
+    }
+
+.mob-pad-t{
+    padding-top: 50px
+    }
+
+}
+
+@media (max-width: 992px) {
+.mob-pad-t{
+    padding-top: 100px
+    }
+    .mob-pad-b{
+    padding-top: 100px
+    }
+}
