@@ -1,0 +1,16 @@
+[
+  {
+    "pk": 1,
+    "model": "products.product",
+    "fields": {
+      "sku": "hf0000001",
+      "name": "Fillet Steak",
+      "description": "From the underside of the sirloin, this cut receives far less work than other muscles and is, as a result, much sought after for it's incredible tenderness. Larger pieces make a lovely quick cooking roast, while steaks are perfect for high heat frying, grilling or BBQing. Fillet is best served medium rare as it tends to loose much of it's more delicate flavour if cooked to well done. 2 fillet steaks - 220g Keep refrigerated. Can be frozen for up to 6 months. Defrost in refrigerator for 24 to 36 hours until completely thawed. Prepare once defrosted.",
+      "price": 21.95,
+      "category": 1,
+      "rating": 4.6,
+      "image_url": "https://raw.githubusercontent.com/Wonka86/home-farm/master/media/Beef_Fillet_Steak.jpg",
+      "image": "Beef_Fillet_Steak.jpg"
+    }
+  }
+]
