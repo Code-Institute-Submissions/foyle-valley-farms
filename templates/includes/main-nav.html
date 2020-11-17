@@ -17,10 +17,10 @@
                 Butchers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="butcher-link">
-                <a href="" class="dropdown-item">Beef</a>
-                <a href="" class="dropdown-item">Pork</a>
-                <a href="" class="dropdown-item">Chicken</a>
-                <a href="" class="dropdown-item">Lamb</a>
+                <a href="{% url 'products' %}?category=beef" class="dropdown-item">Beef</a>
+                <a href="{% url 'products' %}?category=pork" class="dropdown-item">Pork</a>
+                <a href="{% url 'products' %}?category=chicken" class="dropdown-item">Chicken</a>
+                <a href="{% url 'products' %}?category=lamb" class="dropdown-item">Lamb</a>
             </div>
         </li>
 
