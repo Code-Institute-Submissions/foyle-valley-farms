@@ -106,8 +106,10 @@ a.category-badge > span.badge:hover {
         padding-top: 164px;
     }
 
-    
-
+    .m-nav{
+        margin-left: 15%;
+        margin-right: 15%;
+    }
     
 }
 
