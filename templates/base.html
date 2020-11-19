@@ -41,7 +41,7 @@
     <title>Foyle Valley Farms{% block extra_title %}{% endblock %}</title>
   </head>
   <body>
-        <header class="container-fluid fixed-top">
+        <header class="container-fluid fixed-top ">
         
             <div id="topnav" class="row bg-dark pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-3 my-auto py-1 py-lg-0 text-center text-lg-left bg-dark">
@@ -53,9 +53,9 @@
             <div class="col-12 col-lg-6 my-auto py-1 py-lg-0">
                 <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100 ">
-                        <input class="form-control border rounded " type="text" name="q" placeholder="Search our site">
+                        <input class="form-control border border-warning rounded " type="text" name="q" placeholder="Search our site">
                         <div class="input-group-append">
-                            <button class="form-control btn btn-black border rounded bg-warning " type="submit">
+                            <button class="form-control btn border border-warning rounded bg-warning " type="submit">
                                 <span class="icon ">
                                     <i class="fas fa-search text-dark"></i>
                                 </span>
@@ -73,16 +73,16 @@
                                 <p class="my-0 text-warning">My Account<i class="fas fa-sort-down fa-lg text-warning"></i></p>
                             </div>
                         </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                        <div class="dropdown-menu border-top-0 border-warning bg-dark rounded-0" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
-                                    <a href="" class="dropdown-item">Product Management</a>
+                                    <a href="" class="dropdown-item font-weight-bold text-white">Product Management</a>
                                 {% endif %}
-                                <a href="" class="dropdown-item">My Profile</a>
-                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                                <a href="{% url 'profile' %}" class="dropdown-item font-weight-bold text-white">My Profile</a>
+                                <a href="{% url 'account_logout' %}" class="dropdown-item font-weight-bold text-white">Logout</a>
                             {% else %}
-                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                <a href="{% url 'account_signup' %}" class="dropdown-item font-weight-bold text-white">Register</a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item font-weight-bold text-white">Login</a>
                             {% endif %}
                         </div>
                     </li>
@@ -109,7 +109,7 @@
             </div>
             </div>
             <div class="row">
-            <nav class="navbar navbar-expand-lg navbar-dark w-100 pt-0 bg-dark m-nav">
+            <nav class="navbar navbar-expand-lg navbar-dark w-100 pt-0 bg-dark m-nav b-rad border-bottom border-left border-right border-warning">
                     <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>            
