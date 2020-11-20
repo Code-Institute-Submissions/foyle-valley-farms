@@ -1,1 +1,1 @@
-web: gunicorn foyle-valley-farms.wsgi:application
+web: gunicorn foyle_valley_farms.wsgi:application
