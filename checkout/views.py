@@ -15,7 +15,6 @@ import json
 
 
 @require_POST
-
 def cache_checkout_data(request):
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
@@ -25,6 +24,7 @@ def cache_checkout_data(request):
             'save_info': request.POST.get('save_info'),
             'username': request.user,
         })
+        print("Some")
         return HttpResponse(status=200)
     except Exception as e:
         messages.error(request, 'Sorry, your payment cannot be \
@@ -103,7 +103,6 @@ def checkout(request):
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY,
         )
-        
         # Attempt to prefill the form with any info the user maintains in their profile
         if request.user.is_authenticated:
             try:
@@ -134,8 +133,8 @@ def checkout(request):
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
     }
-
     return render(request, template, context)
+
 
 def checkout_success(request, order_number):
     """
