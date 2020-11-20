@@ -4,21 +4,22 @@ html {
 
 body {
     font-family: 'lato';
-    height: 100vh;
+    height: 100%;
 }
 
 
 .bkgrd1 {
     background: url('/media/curious_cow.jpg') no-repeat top center fixed;
     background-size: cover;    
-    height: 100vh;
+    
 }
 
 .bkgrd2 {
     background: url('/media/sheeps-curious.jpg') no-repeat top center fixed;
     background-size: cover;
-    height: 100vh;
+    
 }
+
 
 .b-rad {
     border-bottom-left-radius: 15px;
@@ -68,6 +69,9 @@ body {
 }
 
 .pad-t{
+    padding-top: 35%;
+}
+.pad-b{
     padding-top: 35%;
 }
 
@@ -120,6 +124,7 @@ a.category-badge > span.badge:hover {
     border-radius: 0;
 }
 
+}
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
@@ -254,6 +259,7 @@ a.category-badge > span.badge:hover {
   }
 }
 
+
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
@@ -272,6 +278,14 @@ a.category-badge > span.badge:hover {
         margin-left: 15%;
         margin-right: 15%;
     }
+
+    .bkgrd1{
+        height: 75vh;
+    }
+
+    .bkgrd2{
+        height: 100%;
+}
     
 }
 
@@ -286,16 +300,29 @@ a.category-badge > span.badge:hover {
 
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
 
 .header-container {
-    padding-top: 120px;
+    padding-top: 10%;
 }
 
 .mob-pad-t{
     padding-top: 100px
     }
-    .mob-pad-b{
+.mob-pad-b{
     padding-top: 100px
     }
+.mob-font2{
+        font-size: 150%;
+    }
+
+.bkgrd1{
+    height: 500px;
 }
+
+.bkgrd2{
+    height: 500px;
+}
+}
+
+
