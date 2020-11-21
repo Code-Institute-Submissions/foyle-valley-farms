@@ -20,6 +20,12 @@ body {
     
 }
 
+.bkgrd3 {
+    background: url('/media/Lamb_Shoulder.jpg') no-repeat top center fixed;
+    background-size: cover;
+    
+}
+
 
 .b-rad {
     border-bottom-left-radius: 15px;
