@@ -15,7 +15,7 @@ body {
 }
 
 .bkgrd2 {
-    background: url('/media/sheeps-curious.jpg') no-repeat top center fixed;
+    background: url('/media/sheeps-curious.jpg') no-repeat center left fixed;
     background-size: cover;
     
 }
@@ -291,6 +291,13 @@ a.category-badge > span.badge:hover {
 
     .bkgrd2{
         height: 100%;
+        background-size: 65% 65%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: bottom left; 
+
+    }
+     
 }
     
 }
@@ -328,7 +335,27 @@ a.category-badge > span.badge:hover {
 
 .bkgrd2{
     height: 500px;
+    background-size: 80% 80%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: bottom left; 
 }
+
+}
+
+
+@media (max-width: 767px) {
+
+
+
+    .bkgrd2{
+        height: 500px;
+        background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: bottom left; 
+    }
+
 }
 
 
