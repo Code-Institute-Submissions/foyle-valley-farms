@@ -9,13 +9,14 @@ body {
 
 
 .bkgrd1 {
-    background: url('/media/curious_cow.jpg') no-repeat top center fixed;
-    background-size: cover;    
+    background: url('/media/tractor_horizon.jpg');
+    background-size: cover;   
+    background-repeat: no-repeat; 
     
 }
 
 .bkgrd2 {
-    background: url('/media/sheeps-curious.jpg');
+    background: url('/media/sheep_curious_2.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     
@@ -23,7 +24,7 @@ body {
 }
 
 .bkgrd3 {
-    background: url('https://raw.githubusercontent.com/Wonka86/foyle-valley-farms/master/media/Lamb_Shoulder.jpg');
+    background: url('/media/potato-field.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     
@@ -254,7 +255,7 @@ a.category-badge > span.badge:hover {
     }
 
     .header-container {
-        padding-top: 164px;
+        padding-top: 100px;
     }
 
     .pad-top-product{
@@ -288,7 +289,7 @@ a.category-badge > span.badge:hover {
 @media (max-width: 991px) {
 
 .header-container {
-    padding-top: 12%;
+    padding-top: 5%;
 }
 
 .mob-pad-t{
