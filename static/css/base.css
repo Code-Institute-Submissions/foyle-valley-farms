@@ -172,7 +172,7 @@ a.category-badge > span.badge:hover {
 }
 
 .bag-notification-wrapper {
-    height: 65vh;
+    height: 50vh;
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -298,7 +298,7 @@ a.category-badge > span.badge:hover {
     padding-top: 100px
     }
 .mob-font2{
-        font-size: 150%;
+        font-size: 110%;
     }
 
 .bkgrd1{
