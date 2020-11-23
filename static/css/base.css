@@ -15,14 +15,17 @@ body {
 }
 
 .bkgrd2 {
-    background: url('/media/sheeps-curious.jpg') no-repeat center left fixed;
-    background-size: cover;
+    background: url('/media/sheeps-curious.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    
     
 }
 
 .bkgrd3 {
-    background: url('/media/Lamb_Shoulder.jpg') no-repeat top center fixed;
-    background-size: cover;
+    background: url('https://raw.githubusercontent.com/Wonka86/foyle-valley-farms/master/media/Lamb_Shoulder.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     
 }
 
@@ -131,35 +134,9 @@ a.category-badge > span.badge:hover {
 }
 
 }
-/* ------------------------------- bootstrap toasts */
-
-.message-container {
-    position: fixed;
-    top: 72px;
-    right: 15px;
-    z-index: 99999999999;
-}
-
-.custom-toast {
-    overflow: visible;
-}
-
-.toast-capper {
-    height: 2px;
-}
 
 
-/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
-.arrow-up {
-    width: 0; 
-    height: 0; 
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent; 
-    border-bottom: 10px solid black;
-    position: absolute;
-    top: -10px;
-    right: 36px;
-}
+
 
 /* Convenience classes - colors copied from Bootstrap */
 .arrow-primary {
@@ -195,7 +172,7 @@ a.category-badge > span.badge:hover {
 }
 
 .bag-notification-wrapper {
-    height: 100px;
+    height: 65vh;
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -280,6 +257,10 @@ a.category-badge > span.badge:hover {
         padding-top: 164px;
     }
 
+    .pad-top-product{
+        padding:200px;
+    }
+
     .m-nav{
         margin-left: 15%;
         margin-right: 15%;
@@ -287,15 +268,6 @@ a.category-badge > span.badge:hover {
 
     .bkgrd1{
         height: 75vh;
-    }
-
-    .bkgrd2{
-        height: 100%;
-        background-size: 65% 65%;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: bottom left; 
-
     }
      
 }
@@ -316,7 +288,7 @@ a.category-badge > span.badge:hover {
 @media (max-width: 991px) {
 
 .header-container {
-    padding-top: 10%;
+    padding-top: 150px;
 }
 
 .mob-pad-t{
@@ -333,29 +305,62 @@ a.category-badge > span.badge:hover {
     height: 500px;
 }
 
-.bkgrd2{
-    height: 500px;
-    background-size: 80% 80%;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: bottom left; 
-}
-
-}
-
-
-@media (max-width: 767px) {
-
-
-
-    .bkgrd2{
-        height: 500px;
-        background-size: 100% 100%;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-position: bottom left; 
+.display-4.logo-font.text-black {
+        font-size: 2rem;
     }
 
+.nav-link {
+        padding: 0.15rem;
+    }
+
+.nav-link i.fa-lg {
+        font-size: 1rem;
+    }
+
+.navbar-toggler {
+        padding: .6rem .6rem;
+        font-size: 1rem;
+    }
+
+
+
 }
 
 
+
+
+
+/* ------------------------------- bootstrap toasts */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 0px;
+    z-index: 99999999999;
+    
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
+.toast {
+    height: 85vh;
+    max-width: 250px;
+}
+
+/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+.arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent; 
+    border-bottom: 10px solid black;
+    position: absolute;
+    top: -10px;
+    right: 50px;
+}
