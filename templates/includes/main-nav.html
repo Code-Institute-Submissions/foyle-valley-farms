@@ -1,17 +1,13 @@
 <div class="collapse navbar-collapse bg-dark" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item d-block d-md-none">
-            <a class="logo-font font-weight-bold nav-link text-warning mr-2" href="{% url 'home' %}" id="home-link">
+            <a class="logo-font font-weight-bold nav-link text-warning mr-4" href="{% url 'home' %}" id="home-link">
                 Home
             </a>
         </li>
+        
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-warning mr-2" href="{% url 'about' %}" id="about-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                About Us
-            </a>            
-        </li>
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-white mr-2" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-white mr-4" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Products
             </a>
             <div class="dropdown-menu border-top-0 border-warning bg-dark rounded-0" aria-labelledby="all-products-link">
@@ -23,7 +19,7 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-white mr-2" href="#" id="butcher-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-white mr-4" href="#" id="butcher-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Butchers
             </a>
             <div class="dropdown-menu border-top-0 border-warning bg-dark rounded-0" aria-labelledby="butcher-link">
@@ -35,26 +31,28 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-white mr-2" href="#" id="Bakery-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Bakery & Dairy
+            <a class="logo-font font-weight-bold nav-link text-white mr-4" href="#" id="groceries-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Groceries
             </a>
-            <div class="dropdown-menu border-top-0 border-warning bg-dark rounded-0" aria-labelledby="Bakery-link">
+            <div class="dropdown-menu border-top-0 border-warning bg-dark rounded-0" aria-labelledby="groceries-link">
                 <a href="{% url 'products' %}?category=bread" class="dropdown-item font-weight-bold text-white">Bread</a>
                 <a href="{% url 'products' %}?category=buns" class="dropdown-item font-weight-bold text-white">Buns</a>  
-                <a href="{% url 'products' %}?category=dairy" class="dropdown-item font-weight-bold text-white">Dairy</a>              
+                <a href="{% url 'products' %}?category=dairy" class="dropdown-item font-weight-bold text-white">Dairy</a>
+                <a href="{% url 'products' %}?category=fruit&veg" class="dropdown-item font-weight-bold text-white">Fruit & Veg</a>              
             </div>
         </li>
-
-        <li class="nav-item ">
-            <a class="logo-font font-weight-bold nav-link text-white mr-2" href="{% url 'products' %}?category=fruit&veg" id="fruit&veg-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Fruit and Veg
-            </a>            
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-warning mr-4" href="#" id="about-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About Us
+            </a>   
+            <div class="dropdown-menu border-top-0 border-warning bg-dark rounded-0" aria-labelledby="about-link">
+                <a href="{% url 'about' %}" class="dropdown-item font-weight-bold text-white">Our Story</a>
+                <a href="{% url 'contact' %}" class="dropdown-item font-weight-bold text-white">Contact Us</a>
+                
+            </div>         
         </li>
-        <li class="nav-item" >
-            <a class="logo-font font-weight-bold nav-link text-warning mr-2" href="{% url 'contact' %}" id="contact-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Contact Us
-            </a>            
-        </li>
+        
+        
 
         
     </ul>

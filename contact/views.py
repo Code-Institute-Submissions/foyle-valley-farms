@@ -1,11 +1,13 @@
 from django.shortcuts import render, redirect
 from django.core.mail import send_mail, BadHeaderError
 from django.conf import settings
+
 from django.http import HttpResponse
 from .forms import ContactForm
-
+from checkout.models import Order
 
 import os
+
 
 
 
@@ -30,16 +32,7 @@ def contact(request):
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
     else:
-        
-        if request.user.is_authenticated:
-            profile = Profile.objects.get(user=request.user)
-            user_email = profile.user.email
-            contact_form = ContactForm(initial={
-                'full_name': profile.profile_full_name,
-                'email': user_email,
-                })
-        else:
-            contact_form = ContactForm()
+         contact_form = ContactForm()
 
     context = {
         'contact_form': contact_form,        
