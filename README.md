@@ -1,45 +1,125 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+<img src="https://raw.githubusercontent.com/Wonka86/foyle-valley-farms/master/media/tractor-banner.png" style="margin: 0;">
 
-Welcome Jude,
+# Foyle Valley Farms
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+Live Website can be visited <a href="https://foyle-valley-farms.herokuapp.com/" target="_blank">Here</a>
 
-## Gitpod Reminders
+Conceived from a love of fresh locally sourced food, Foyle Valley Farms  has become a hub for top notch produce.The online farming co-op plan is to serve people in the north-west region with freshly supplied produce from farms that specialise in different types of farming.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+This project is used to showcase the use of Fullstack skills in the production of a farm shop to supply fresh produce in the local vicinity with the idea of creating a viable product that users and producers woould what to use to buy and sell on. 
 
-`python3 -m http.server`
+## UX
 
-A blue button should appear to click: *Make Public*,
 
-Another blue button should appear to click: *Open Browser*.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### Target audience
 
-A blue button should appear to click: *Make Public*,
+- People who want to shop local but find it difficult to shop in person (for any reason)
+- People who are not sure were to start when shopping fresh 
+- People who are curious about what sort of products a grown locally
+- People who are looking for an alternative choice
+- People who are interested in sustainable farming practises and enviornment
 
-Another blue button should appear to click: *Open Browser*.
+### User Stories
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### New User
 
-## Updates Since The Instructional Video
+- I expect to easily navigate the website, so that I can quickly find what I'm looking for.
+- I want to be able to learn more about Foyle Valley farms and what makes them different.
+- I expect to access the website from any device, so that I can use the website anytime and anywhere.
+- I want to be able to easily contact the owner/manager of the company, so that I can write an additional query or ask a question.
+- I expect to be able to easily register for an account so that I can see and save my personal details for quicker ordering in the future.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### Returning user
+
+- I want to be able to easily log in and out of my account so that I can access my personal information and order history.
+- I expect to be able to reset/ change my password if I forgot it, so that I can get access to my profile again.
+- I want to be able to have my delivery details prefilled so that I can save time.
+
+### Website User
+
+- I expect to be able to add/delete products from my cart so that I can update the products I would like to purchase
+- I want to be able to see a list of products and easily break them down to different categories.
+- I expect to be able to click on a product and see it in more detail.
+- I want to be able to receive an order confirmation so that I can be sure my order has gone through.
+
+### Website Owner
+
+- I expect to be able to Sell products securely to customers
+- I want to have convenient admin interface to be able to add, remove and update products.
+
+
+## Wireframes
+
+The following wire frame was used as the base design for thw website
+
+- [Wireframe]()
+
+There have been some changes from the orginal design due to aesthetic appeal not feeling quite right on production.
+
+[wireframe](https://wireframe.cc/) tool was used to create the wireframes for the project
+
+## Website Features
+
+### Existing Website Features
+
+- Navigation Bar:  Main nav bar is fixed at the top throughout all pages on desktop and mobile screen. The logo placed on the left hand side, search option, accounts and shopping cart moving left to right. This allows for ease of navigation in finding products, login/ register and items bought so far.
+
+- Navigation : secondary nav allows for accesing shop and reading information about shop and
+
+### Features to add in the future:
+
+
+
+
+## Technologies Used
+
+lANGUAGES
+
+[HTML5](https://en.wikipedia.org/wiki/HTML5) 
+
+[CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) 
+
+[JavaScript](https://en.wikipedia.org/wiki/JavaScript) 
+
+[Python](https://www.python.org/)
+
+Libraries and Frameworks
+
+[Django](https://www.djangoproject.com/)
+
+[Bootstrap](https://www.bootstrapcdn.com/)
+
+[stripe](https://stripe.com/gb)
+
+[Fontawesome](https://fontawesome.com/)
+
+[Gunicorn ](https://pypi.org/project/gunicorn/)
+
+[Google Fonts](https://fonts.google.com/)
+
+Tools
+
+[AWS](https://aws.amazon.com/)
+
+[GitHub](https://en.wikipedia.org/wiki/GitHub) 
+
+[Heroku](https://www.heroku.com/what)
+
+[GitPod ](https://www.gitpod.io/)
+
+[wireframe](https://wireframe.cc/) 
+
+Databases
+
+[SQlite3](https://www.sqlite.org/index.html)
+
+[PostgreSQL](https://www.postgresql.org/)
+
+## Credits
+
 
 **October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
---------
-
-Happy coding!
