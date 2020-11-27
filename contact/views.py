@@ -5,6 +5,7 @@ from django.conf import settings
 from django.http import HttpResponse
 from .forms import ContactForm
 from checkout.models import Order
+from profiles.models import UserProfile
 
 import os
 
@@ -32,14 +33,19 @@ def contact(request):
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
     else:
-         contact_form = ContactForm()
+        if request.user.is_authenticated:
+            profile = UserProfile.objects.get(user=request.user)
+            contact_form = ContactForm(initial={
+                'email': profile.user.email,
+                })
+        else:
+            contact_form = ContactForm()
 
     context = {
         'contact_form': contact_form,        
     }
 
     return render(request, 'contact/contact.html', context)
-
 
 def contact_thankyou(request):
     """
