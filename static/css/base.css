@@ -106,7 +106,7 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
-.nav-item.dropdown:hover{    
+.nav-item.dropdown-item:hover{    
     color: rgb(78, 75, 75)8, 64, 64);
 }
 
