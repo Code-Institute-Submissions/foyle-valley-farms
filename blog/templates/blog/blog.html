@@ -12,17 +12,13 @@
 
 {% block content %}
 
-        <div class="container h-100 pb-5 bkgrd2">
-            <div class="row h-100">
+        <div class="container h-100 pb-5">
+            <div class="row h-100 pb-5">
                 <div class="col-12 ">
                     <h1 class=" text-light font-weight-bold pt-5 text-center">
                         Blog
-                    </h1>
-                    
-                
-         
-                
-              
+                    </h1>      
+
                     <!-- Blog Entries Column -->
                     <div class="col-12 col-md-8 mt-3 left pb-5">
                         {% for post in post_list %}
@@ -35,11 +31,20 @@
                             </div>
                         </div>
                         {% endfor %}
-                    </div>
-                    
-            
-                
+                        <nav aria-label="Page navigation conatiner pb-5">
+                        <ul class="pagination justify-content-center">
+                            {% if page_obj.has_previous %}
+                            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link text-light bg-dark border border-dark rounded font-weight-bold">&laquo; PREV </a></li>
+                            {% endif %}
+                            {% if page_obj.has_next %}
+                            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link text-light bg-dark border border-dark rounded font-weight-bold"> NEXT &raquo;</a></li>
 
+                            {% endif %}
+                        </ul>
+                        </nav>
+                    
+                    </div>
+                    <div class="w-100 p-1"></div>
                 </div>
             </div>
         </div>
