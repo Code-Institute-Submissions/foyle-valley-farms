@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -29,6 +30,11 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        from django.urls import reverse
+
+        return reverse("post_detail", kwargs={"slug": str(self.slug)})
 
 # Adding comments to blog posts https://djangocentral.com/creating-comments-system-with-django/
 
