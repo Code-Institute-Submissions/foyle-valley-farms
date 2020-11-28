@@ -34,21 +34,6 @@ def post_detail(request, slug):
     comments = post.comments.filter(active=True)
     new_comment = None
     # Comment posted
-
-    if request.user.is_authenticated:
-        try:
-            profile = UserProfile.objects.get(user=request.user)
-            comment_form = CommentForm(initial={
-                'email': profile.user.email,
-            })
-        except UserProfile.DoesNotExist:
-            comment_form = CommentForm()
-    else:
-        comment_form = CommentForm()
-
-    print(comment_form)
-    print(profile)
-
     if request.method == 'POST':
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
@@ -65,5 +50,4 @@ def post_detail(request, slug):
     return render(request, template_name, {'post': post,
                                            'comments': comments,
                                            'new_comment': new_comment,
-                                           'comment_form': comment_form
-                                           })
+                                           'comment_form': comment_form})
