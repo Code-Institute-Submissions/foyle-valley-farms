@@ -3,16 +3,29 @@ from django.views import generic
 from .models import Post
 from .forms import CommentForm
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
+from profiles.models import UserProfile
 
 
 # Create your views here.
 # https://djangocentral.com/adding-pagination-with-django/
 
 
-class PostList(generic.ListView):
-    queryset = Post.objects.filter(status=1).order_by('-created_on')
-    template_name = 'blog/blog.html'
-    paginate_by = 3
+def PostList(request):
+    object_list = Post.objects.filter(status=1).order_by('-created_on')
+    paginator = Paginator(object_list, 3)  # 3 posts in each page
+    page = request.GET.get('page')
+    try:
+        post_list = paginator.page(page)
+    except PageNotAnInteger:
+            # If page is not an integer deliver the first page
+        post_list = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range deliver last page of results
+        post_list = paginator.page(paginator.num_pages)
+    return render(request,
+                  'blog/blog.html',
+                  {'page': page,
+                   'post_list': post_list})
 
 
 def post_detail(request, slug):
@@ -21,6 +34,21 @@ def post_detail(request, slug):
     comments = post.comments.filter(active=True)
     new_comment = None
     # Comment posted
+
+    if request.user.is_authenticated:
+        try:
+            profile = UserProfile.objects.get(user=request.user)
+            comment_form = CommentForm(initial={
+                'email': profile.user.email,
+            })
+        except UserProfile.DoesNotExist:
+            comment_form = CommentForm()
+    else:
+        comment_form = CommentForm()
+
+    print(comment_form)
+    print(profile)
+
     if request.method == 'POST':
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():

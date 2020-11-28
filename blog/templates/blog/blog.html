@@ -11,7 +11,6 @@
 
 
 {% block content %}
-
         <div class="container h-100 pb-5">
             <div class="row h-100 pb-5">
                 <div class="col-12 ">
@@ -20,36 +19,43 @@
                     </h1>      
 
                     <!-- Blog Entries Column -->
-                    <div class="col-12 col-md-8 mt-3 left pb-5">
-                        {% for post in post_list %}
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <h2 class="card-title">{{ post.title }}</h2>
-                                <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
-                                <p class="card-text">{{post.content|slice:":200" }}</p>
-                                <a href="{% url 'post_detail' post.slug  %}" class="btn btn-dark">Read More &rarr;</a>
+                        <div class="col-md-8 mt-3 left">
+                            {% for post in post_list %}
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h2 class="card-title">{{ post.title }}</h2>
+                                    <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
+                                    <p class="card-text">{{post.content|slice:":200" }}</p>
+                                    <a href="{% url 'post_detail' post.slug  %}" class="btn btn-dark">Read More &rarr;</a>
+                                </div>
                             </div>
+                            {% endfor %}
                         </div>
-                        {% endfor %}
-                        <nav aria-label="Page navigation conatiner pb-5">
-                        <ul class="pagination justify-content-center">
-                            {% if page_obj.has_previous %}
-                            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link text-light bg-dark border border-dark rounded font-weight-bold">&laquo; PREV </a></li>
-                            {% endif %}
-                            {% if page_obj.has_next %}
-                            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link text-light bg-dark border border-dark rounded font-weight-bold"> NEXT &raquo;</a></li>
+                        {% if post_list.has_other_pages %}
+                            <nav aria-label="Page navigation conatiner ">
+                                <ul class="pagination justify-content-center">
+                                {% if post_list.has_previous %}
+                                <li>
+                                    <a href="?page={{ post_list.previous_page_number }}" class="page-link text-light bg-dark font-weight-bold rounded"
+                                    >&laquo; PREV
+                                    </a>
+                                </li>
+                                {% endif %} {% if post_list.has_next %}
+                                <li>
+                                    <a href="?page={{ post_list.next_page_number }}" class="page-link text-light bg-dark font-weight-bold rounded">
+                                    NEXT &raquo;</a
+                                    >
+                                </li>
+                                {% endif %}
+                                </ul>
+                            </nav>
+                            
+                        {% endif %}   
 
-                            {% endif %}
-                        </ul>
-                        </nav>
-                    
-                    </div>
-                    <div class="w-100 p-1"></div>
-                </div>
+                </div>              
             </div>
-        </div>
-        
-        
-        
+            <div class="w-100 p-5"></div>
+        </div>  
+                        
 {% endblock %}
 
