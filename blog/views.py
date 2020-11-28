@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from .models import Post
 from .forms import CommentForm
-from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
+
 
 
 
