@@ -10,8 +10,6 @@ This project is used to showcase the use of Fullstack skills in the production o
 
 ## UX
 
-
-
 ### Target audience
 
 - People who want to shop local but find it difficult to shop in person (for any reason)
@@ -53,24 +51,66 @@ This project is used to showcase the use of Fullstack skills in the production o
 
 The following wire frame was used as the base design for thw website
 
-- [Wireframe]()
+- [Wireframe](https://github.com/Wonka86/foyle-valley-farms/tree/master/wireframes)
 
 There have been some changes from the orginal design due to aesthetic appeal not feeling quite right on production.
 
 [wireframe](https://wireframe.cc/) tool was used to create the wireframes for the project
 
+## Design
+
+- I used Bootstrap framework for ease of use and ability to be easily customized. It is used for creating features such as navbar, cards, forms, as well as for the layout.
+- JQuery is used for initializing some Bootstrap components.
+- I used FontAwesome across the project for social media links, forms, cart, search and user icons in navigation.
+
 ## Website Features
+
+Foyle valley farms contain the following applications: home, about, blog, bag, checkout, contact, products and profiles.
 
 ### Existing Website Features
 
-- Navigation Bar:  Main nav bar is fixed at the top throughout all pages on desktop and mobile screen. The logo placed on the left hand side, search option, accounts and shopping cart moving left to right. This allows for ease of navigation in finding products, login/ register and items bought so far.
+- Navigation Bar:  Main nav bar is fixed at the top throughout all pages on desktop and mobile screen. The logo placed on the left hand side, search option, accounts and shopping cart moving left to right.  This allows for ease of navigation in finding products, login/ register and items bought so far.
 
-- Navigation : secondary nav allows for accesing shop and reading information about shop and
+
+- Navigation : secondary nav allows for accesing shop, reading information about shop, contact and blog. This collapses on small screen to a burger menu.
+
+- Footer: Contains social media link and home logo/button comes in two forms one for desktop and mobile.
+
+- Home page: The home page serves to draw in users to the business and give an idea of what is expected from the website. 
+**Hero Image** section is what users see first. The idea behind this is to give an impression of wholsome hard working local farmers producing what we need with a button to take you directly to the products.
+**Quotes** sections are there to give short sharpe emphasis on what standards that the company look for **sustainability** and **Quality**
+**short statement** section is to build on the eye catching quotes and fill the user in more
+
+- About Page: The about page continues to give more information on foyle valley farms and its main focus and ideas
+
+- Contact Page: Offers a contact form to fill out with name, email and message if a user has any questions or queries. The real email will be sent to the admin of the website. Contact details of where the main office is to be found, ways in which it can be contacted and opening hours are also made avaiable.
+
+- Blog: This section offeres another form of interaction with users and a larger scope for engagement. If there are any events or further background information it can be posted here and users can comment.
+
+- Products pages: (includes Butchery and groceries)
+
+- Product details page:
+
+- Bag page:
+
+- Checkout Page: (includes checkout success)
+
+- Profile page
+
+- Product Admin
+
+- Django-allauth features
+
 
 ### Features to add in the future:
 
+- Social account login 
 
+## Information Architecture
 
+### Database choice
+
+### Data Modelling
 
 ## Technologies Used
 
@@ -116,10 +156,10 @@ Databases
 
 [PostgreSQL](https://www.postgresql.org/)
 
+## Testing
+
+## Deployment
+
 ## Credits
-
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
 
 
