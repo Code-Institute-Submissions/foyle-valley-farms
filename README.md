@@ -114,7 +114,7 @@ Foyle valley farms contain the following applications: home, about, blog, bag, c
 
 ## Technologies Used
 
-lANGUAGES
+Languages
 
 [HTML5](https://en.wikipedia.org/wiki/HTML5) 
 
