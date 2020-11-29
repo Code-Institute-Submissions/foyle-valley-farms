@@ -78,8 +78,8 @@ Foyle valley farms contain the following applications: home, about, blog, bag, c
 
 - Home page: The home page serves to draw in users to the business and give an idea of what is expected from the website. 
 **Hero Image** section is what users see first. The idea behind this is to give an impression of wholsome hard working local farmers producing what we need with a button to take you directly to the products.
-**Quotes** sections are there to give short sharpe emphasis on what standards that the company look for **sustainability** and **Quality**
-**short statement** section is to build on the eye catching quotes and fill the user in more
+**Quotes** sections are there to give short sharpe emphasis on what standards that the company look for **sustainability** and **Quality**.
+**short statement** section is to build on the eye catching quotes and fill the user in more.
 
 - About Page: The about page continues to give more information on foyle valley farms and its main focus and ideas
 
@@ -87,30 +87,30 @@ Foyle valley farms contain the following applications: home, about, blog, bag, c
 
 - Blog: This section offeres another form of interaction with users and a larger scope for engagement. If there are any events or further background information it can be posted here and users can comment.
 
-- Products pages: (includes Butchery and groceries)
+- Products pages: (includes Butchery and groceries) Displays product cards with following information - img, name, category, rating and price. All cards are clickable and send the user to individual product detail page. Depending on weather the user has superuser privilege they will be able to edit and delete products on this page with the edit button directing them to product management page and the delete button deleting the product. Users of all levels also have the ability to filter products.
 
-- Product details page:
+- Product details page: This page offers more information to the user on the specific item showing same informtaion that was in products page along with a detailed paragraph on the item. Here the user can select how many of a particular item they would like to buy with item quantity buttons. The user can then proceed to add to bag and either keep shopping or proceed to bag by clicking on the pop up that says item is added to bag or by clicking the trolly icon item on top right.
 
-- Bag page:
+- Bag page: The user can evalulate what the have added and make adjustments. They have options to increase or decrease the quantity of the items they would like, see a total of how much everything costs and either keep shopping which return the user to the products page or head to payment by clicking the secure checkout button.
 
-- Checkout Page: (includes checkout success)
+- Checkout Page:  The checkout page has a brief summary of what is being bought displaying quantities names and totals. The page also contains a form which if the user is logged in will be prefilled and all the user will have to complete will be the card payments. when the user can then complete or or adjust bag. adjust bag will go back to the bag section and complete order will go to checkout success page and put order through stripe payment.Since the website is made for educational purposes only and the Stripe functionality is only for testing, only 4242 4242 4242 4242 card number will lead to the successfull payment.
 
-- Profile page
+- Checkout success: A display message will thank you saying email confirmation. Information about the order is also displayed.
 
-- Product Admin
+- Profile page: Available only for authenticated users it contains personal information shipping details and order history.
 
-- Django-allauth features
+- Product Admin: Available only for authenticated superusers it contains the ability to add new products by filling out a form. If valid the form/new product is added to the products page.
+
+- Django-allauth features: inlcude sign up ( allows a user to create a new account), Login (allows registered users to log into their account), Forgot password ( allows user to reset password), Logout (renders logout page that gices user option to continue logout)
 
 
 ### Features to add in the future:
 
-- Social account login 
+- Social account login: This feature would allow an ease of use by connecting accounts such as facebook or google and enhance user experience.
 
-## Information Architecture
+- Defensive delete button: Currently, the Delete button to delete a product has no defence to stop it being automatically pressed. A confirmation of delete should be added.
 
-### Database choice
-
-### Data Modelling
+- Reviews products section: Reading reviews are a great way to help users decide to purchase a product.
 
 ## Technologies Used
 
@@ -159,6 +159,14 @@ Databases
 ## Testing
 
 ## Deployment
+
+Foyle-valley-farms was developed on gitpod and deployed on Heroku.
+
+Heroku deployment process
+
+- [requirements.txt](https://github.com/Wonka86/foyle-valley-farms/blob/master/requirements.txt) is needed as it contains a list of dependencies and created by pip3 freeze > requirements.txt in gitpod console.
+- [Procfile](https://github.com/Wonka86/foyle-valley-farms/blob/master/Procfile) is needed in order to tell heroku how to run project.
+- Go to [Heroku](https://dashboard.heroku.com/apps) and create a new app, assign a name and closest region and click create app.
 
 ## Credits
 
