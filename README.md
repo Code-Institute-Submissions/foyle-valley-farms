@@ -329,9 +329,9 @@ Admin
 
 - HTML - HTML files were tested with [W3 Validator](https://validator.w3.org/#validate_by_input) some minor errors showed but nothing that cause major issues.
 
-- CSS - CSS files were tested with [https://jigsaw.w3.org/css-validator/](https://jigsaw.w3.org/css-validator/) again no major errors showed themselves
+- CSS - CSS files were tested with [https://jigsaw.w3.org/css-validator/](https://jigsaw.w3.org/css-validator/) again no major errors showed themselves.
 
-- JavaScript - JS files were tested with [Esprima](https://esprima.org/demo/validate.html) and showed no major issues
+- JavaScript - JS files were tested with [JShint](https://jshint.com/) and [Esprima](https://esprima.org/demo/validate.html). No major issues indicated.
 
 
 ### Responsiveness and compability
