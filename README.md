@@ -27,6 +27,7 @@ This project is used to showcase the use of Fullstack skills in the production o
 - I expect to access the website from any device, so that I can use the website anytime and anywhere.
 - I want to be able to easily contact the owner/manager of the company, so that I can write an additional query or ask a question.
 - I expect to be able to easily register for an account so that I can see and save my personal details for quicker ordering in the future.
+- I want to be able to access social media accounts of the company as i use these daily and would like more information through that interface.
 
 ### Returning user
 
@@ -157,6 +158,89 @@ Databases
 [PostgreSQL](https://www.postgresql.org/)
 
 ## Testing
+
+### Manual Testing
+
+Navbar
+
+- New User Story - *I expect to easily navigate the website, so that I can quickly find what I'm looking for.*
+- Returning user Story - *I want to be able to easily log in and out of my account so that I can access my personal information and order history.*
+- Test
+  - Check all links on navbar to check if they work properly.
+  - Check links on different devices.
+  - on mobile make sure menu goes to burger bar.
+  - scroll to make sure menu is visible.
+  - Make sure search bar appears on mobile devices.
+  - Ensure if item added to art appears in alert and total in nav is updated.
+
+- Some bugs appeared with smaller screens sizing, easily corrected. Fruit and veg link didnt work as the category was *fruit&veg* once the & symbol was removed it worked.
+
+Footer
+
+- New User story - *I want to be able to access social media accounts of the company as i use these daily and would like more information through that interface.*
+- New User Story - *I expect to easily navigate the website, so that I can quickly find what I'm looking for.*
+- Test 
+  - Check all links on footer to check if they work properly (socail media links currently linked to main website as no accounts have been set up due to this being an educational project).
+  - Check links on different devices.  
+
+- No bugs found all links worked.
+
+Search Bar
+
+- New User Story - *I expect to easily navigate the website, so that I can quickly find what I'm looking for.*
+- Test 
+  - enter any search word into the search box to see if it redirects to the products page with correct results displayed.
+  - submit an empty search query without entering anything.
+  - Enter some search words that are expected to be found in the website such as beef and bread.
+  - Enter some search words that are not expected to be found in the website.
+  - Search from different pages to make sure it works accross all the website.
+
+- Works ad intended
+
+Home Page
+
+New User Story - *I want to be able to learn more about Foyle Valley farms and what makes them different.*
+
+
+About page
+
+Contact Page
+
+Blog Page
+
+Products Page
+
+Products detail page
+
+bag Page
+
+Checkout & Checkout success Pages
+
+Profile Page
+
+Admin
+
+### Validators
+
+- HTML - HTML files were tested with [W3 Validator](https://validator.w3.org/#validate_by_input) some minor errors showed but nothing that cause major issues.
+
+- CSS - CSS files were tested with [https://jigsaw.w3.org/css-validator/](https://jigsaw.w3.org/css-validator/) again no major errors showed themselves
+
+- JavaScript - JS files were tested with [Esprima](https://esprima.org/demo/validate.html) and showed no major issues
+
+
+### Responsiveness and compability
+
+- Google Chrome's developer tools to see how it looks across all the different device screen sizes to ensure compatibility and responsiveness.
+
+- The website was also tested on multiple browsers inlcudeing Chrome, Edge, Firefox and IE.
+
+### other
+
+The app was constantly tested with debugger locally with debug=True throughout all the development process. Every time when there was an issue, the debugger displayed an error message, that allowed me to locate and fix it issues.
+
+
+
 
 ## Deployment
 
