@@ -195,30 +195,135 @@ Search Bar
   - Enter some search words that are not expected to be found in the website.
   - Search from different pages to make sure it works accross all the website.
 
-- Works ad intended
+- Works as intended.
 
 Home Page
 
-New User Story - *I want to be able to learn more about Foyle Valley farms and what makes them different.*
+- New User Story - *I want to be able to learn more about Foyle Valley farms and what makes them different.*
+- Test
+  - Main button on hero image clicked and working.
+  - Click on all buttons on page to verify that they work.
+  - scroll down and verify that statemeents of information on whats is to be expected on site is there.
 
+- No bugs found during testing.
 
 About page
 
+- New User Story - *I want to be able to learn more about Foyle Valley farms and what makes them different.*
+- Test
+  - Verify that the expected text is displayed correctly.
+  - Check that the correct images are displayed for each of the sections.
+
+- No bugs found during testing . 
+
 Contact Page
+
+- New User Story - *I want to be able to easily contact the owner/manager of the company, so that I can write an additional query or ask a question.*
+- Test
+  - try to submit an empty Contact form and email without @.
+  - try to submit the form with all valid information.
+  - Verify that the expected text is displayed correctly.
+  - Check that the correct images are displayed for each of the sections.
+
+- No bugs found during testing.
 
 Blog Page
 
-Products Page
+- New User Story - *I want to be able to easily contact the owner/manager of the company, so that I can write an additional query or ask a question.*
+- New User Story - *I want to be able to learn more about Foyle Valley farms and what makes them different.*
+- Test
+  - Create a blog post through admin successfully.
+  - comments created and go to admin to be authorised before post.
+  - Verify that the expected text is displayed correctly.
+  - try to submit empty comment form.
+  - try to submit valid comment form.
 
-Products detail page
 
-bag Page
+- Issue developed before testing in that blog was not developed on sqlite database and was an addition to website after it had been deployed. Database dump then loaddata to move the blog to heroku and get working. This still had issues in that some of the blog posts didnt transfer over and had to be rewrote manually.
+
+Products & Products detail page
+
+- Website User Story - *I want to be able to see a list of products and easily break them down to different categories.*
+- Website User Story - *I expect to be able to click on a product and see it in more detail.*
+- Test
+  - Verify that the expected text and images are displayed correctly in both products and product details pages.
+  - Select the category, clicking on the category-links.
+  - Login with superuser credentials and verify that the Edit/Delete buttons appear in both products and product details pages.
+  - Being a guest or logging in as a regular user, try manually enter the /edit/ and /delete/ urls.
+  - Click on the "View Details" button and on the product image on the all products page.
+  - Click on all links on pages.
+  - Click on the "Add to Cart" button on the both products and product details pages
+  - On the products page try to enter a negative or higher than 999 number in the quality form and click on "Add to cart" button.
+  - Enter the quantity in the range of 1-999 and click on the "Add to cart" button.
+
+- issue with increment buttons - found to be javascript indentation issue.
+
+Bag Page
+
+- Website User Story - *I expect to be able to add/delete products from my cart so that I can update the products I would like to purchase.*
+- Test
+  - Verify that the text and images of the added items are displayed correctly.
+  - Try to update the item quantity with different products.
+  - Try to manually enter invalid quantity.
+  - Click on the "Checkout" button.
+  - Remove all the items and check the empty cart, click on the "Go shopping" button.
+
+- issue with increment buttons - found to be javascript indentation issue.
 
 Checkout & Checkout success Pages
 
+- Website User Story - *I want to be able to receive an order confirmation so that I can be sure my order has gone through.*
+- Test
+  - Verify that the text and images(Order summary) are displayed correctly
+  - click on the "Edit bag" link.
+  - try to put an incorrect information
+  - Enter test card payment and ensure payment goes through to stripe.
+  - enter invalid payment card.
+
+- issue with increment buttons - found to be javascript indentation issue.
+- email issue - no verification email was being sent out to confirm what items where bought. App deployed on Heroku had development set True, once delete emails worked fine.
+
 Profile Page
 
+- Returning user Story - *I want to be able to have my delivery details prefilled so that I can save time.*
+- Test
+  - Navigate to the My Profile from the Navbar link
+  - Check being a logged in and non-logged in user, that it's only available to the authenticated users.
+  - Click on the Order number on the Order History page.
+  - Test update information button with correct and incorrect values.
+  - After update make purchase to see if information has updated.
+
+- No bugs found during testing.
+
+Allauth Pages
+
+- Returning user Story - *I want to be able to easily log in and out of my account so that I can access my personal information and order history.*
+- Returning user Story - *I expect to be able to reset/ change my password if I forgot it, so that I can get access to my profile again.*
+- New user Story - *I expect to be able to easily register for an account so that I can see and save my personal details for quicker ordering in the future.*
+- Test
+  - Try to register entering incorrect email, incorrect password and username/email that already exists in the database.
+  - Submit valid registration form.
+  - Entering two different passwords in registration form and trying to enter old password when re-setting password.
+  - Create an account and try to login with correct and incorrect details.
+  - Click on logout link in the navbar and then on logout button.
+
+- email issue on deployed site - no verification email was being sent out upon registering. App deployed on Heroku had development set True, once delete emails worked fine.
+
 Admin
+
+- Website Owner Story - *I want to have convenient admin interface to be able to add, remove and update products.*
+- Test
+  - Navigate to the Product Management page from the navbar
+  - Click on the "Add a New Product"
+  - Try to submit a form with both empty and with invalid information to see if the error messages will appear.
+  - Submit "Add a New Product" form with all valid information multiple times creating different products (providing/not providing an image, filling all/only required fields)  
+  - After adding a product/service with an image, go to the AWS S3 website and check the basket to see if the image was saved there.
+  - After clicking "Edit" button on the product/service pages, fill out the edit form.
+  - Create few testing products and services with dummy data for testing the delete functionality:
+  - Click on the "Delete" button on the product ensure it works.
+  - Being a guest or logged in as a regular user(not admin), manually enter the edit/delete/add URLS to reach the corresponding pages trying to access admin functionality and manipulate the database.
+
+- No bugs found during testing.
 
 ### Validators
 
